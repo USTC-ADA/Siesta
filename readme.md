@@ -11,7 +11,7 @@ This project needs to install cvxopt, numpy, mpi4py in the python environment.
 
 ## Siesta: Our proxy-app generator
 
-- **code_gen.py:** Code generation.
+- **bench_py_ver:** Code generation.
 - **constant.py:** Some constant definitions used in the program.
 - **main.py:** Main function.
 - **merge_main_rule.py:** Merge all the main rules.
