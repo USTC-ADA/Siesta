@@ -9,6 +9,18 @@ This project depends on libunwind. <https://www.nongnu.org/libunwind/>
 This project needs to install cvxopt, numpy, mpi4py in the python environment.
 
 
+## Siesta: Our proxy-app generator
+
+- **code_gen.py:** Code generation.
+- **constant.py:** Some constant definitions used in the program.
+- **main.py:** Main function.
+- **merge_main_rule.py:** Merge all the main rules.
+- **MPI_define.py:** Some constants defined by MPI.
+- **nonterminal_dict.py:** Merge dictionaries of non-terminals.
+- **sequitur.py:** Implementation of the sequitur algorithm.
+- **utils.py:** Implementation of some helper functions.
+- **with_compute.py:** Use clustering-based method to compress compute information.
+
 
 ## Tools
 
@@ -25,19 +37,6 @@ This project needs to install cvxopt, numpy, mpi4py in the python environment.
 - **pt2pt:** Point to point MPI communication function.
 - **collective:** Collective MPI blocking communication functions.
 - **util:** Some utilities to generate executable files.
-
-#### Siesta: Our proxy-app generator
-
-- **code_gen.py:** Code generation.
-- **constant.py:** Some constant definitions used in the program.
-- **main.py:** Main function.
-- **merge_main_rule.py:** Merge all the main rules.
-- **MPI_define.py:** Some constants defined by MPI.
-- **nonterminal_dict.py:** Merge dictionaries of non-terminals.
-- **sequitur.py:** Implementation of the sequitur algorithm.
-- **utils.py:** Implementation of some helper functions.
-- **with_compute.py:** Use clustering-based method to compress compute information.
-
 
 
 ## Quick Start
