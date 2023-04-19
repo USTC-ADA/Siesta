@@ -1,0 +1,3 @@
+funct = "MPI_Send"
+# olist.append("\nprintf(\"" + funct + "\\n\");\n")
+print("\nprintf(\"" + funct + "\\n\");\n")
