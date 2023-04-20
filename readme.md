@@ -53,14 +53,14 @@ export LD_PRELOAD=/path/to/libmpiP.so
 4. If the processor cannot record six hardware performance counter events in one execution, perform multiple executions and merge traces
 
 ```shell
-mpiexec -np $nprocs python splice.py -t /path/to/trace/ -o /path/to/trace_merged/
+mpirun -np $nprocs python splice.py -t /path/to/trace/ -o /path/to/trace_merged/
 ```
 
 5. Run main.py and code_gen.py to compress traces and generate proxy-app.
 
 ```shell
-mpiexec -np $nprocs python main.py -t /path/to/trace/ -o /path/to/proxy/
-python code_gen.py -o /path/to/data_bucket
+mpirun -np $nprocs python main.py -t /path/to/trace/ -o /path/to/proxy/
+mpirun -np $nprocs python code_gen.py -o /path/to/data_bucket
 ```
 
 6. Compile the generated proxy-app and execute it for replay.
