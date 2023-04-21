@@ -19,7 +19,7 @@ This project needs to install cvxopt, numpy, mpi4py in the python environment.
 - **nonterminal_dict.py:** Merge dictionaries of non-terminals.
 - **sequitur.py:** Implementation of the sequitur algorithm.
 - **utils.py:** Implementation of some helper functions.
-- **with_compute.py:** Use clustering-based method to compress compute information.
+- **with_compute.py:** Use clustering-based method to compress computation information.
 
 
 ## Tools
