@@ -1762,8 +1762,6 @@ def GenerateWrappers():
                                             # 3 或者values长度固定，每次不够长度时写文件，然后从零开始写values数组？ listpush函数貌似已经线程了，方案是2
 
     for funct in flist:
-        if funct != 'MPI_Init' and funct != 'MPI_Finalize':
-            fdict[funct].nowrapper = True
         CreateWrapper(funct, olist)
     olist.append("\n")
     olist.append("\n")
