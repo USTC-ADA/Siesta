@@ -20,7 +20,7 @@ void list_init(list_t *list)
     printf("error: insufficient memory for initializing list\n");
   }
 }
-void list_push(list_t *list, char *item)
+void list_ppush(list_t *list, char *item)
 {
   int item_size;
   item_size = strlen(item);
