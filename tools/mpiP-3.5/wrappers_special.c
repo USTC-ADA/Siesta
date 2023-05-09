@@ -67,7 +67,7 @@ static int _MPI_Init(int *argc, char ***argv) {
 
     sprintf(event_buffer, "%d,MPI_Init,%d;%d;%d,%.0lf,%.0lf,%d:\n", mpiPi.rank,
             0, 0, 0, start_from_begin, end_from_begin, -1);
-    list_push(&mpiPi.event_list, event_buffer);
+    list_ppush(&mpiPi.event_list, event_buffer);
 
     int papi_retval, num_tests = 1, num_events = 0, i = 0;
     char **papi_events;
@@ -312,7 +312,7 @@ static int _MPI_Finalize() {
                 values[0][papi_it]);
     }
     sprintf(event_buffer + strlen(event_buffer), "\n");
-    list_push(&mpiPi.event_list, event_buffer);
+    list_ppush(&mpiPi.event_list, event_buffer);
     
     int rc = 0;
     mpiPi_GETTIME(&start);
@@ -323,7 +323,7 @@ static int _MPI_Finalize() {
 
     sprintf(event_buffer, "%d,MPI_Init,%d;%d;%d,%.0lf,%.0lf,%p\n", mpiPi.rank,
             0, 0, 0, start_from_begin, end_from_begin, 0);
-    list_push(&mpiPi.event_list, event_buffer);
+    list_ppush(&mpiPi.event_list, event_buffer);
 
     mpiPi.enabled = 0;
     mpiPi_msg_debug("calling PMPI_Finalize\n");

@@ -1275,7 +1275,7 @@ def CreateWrapper(funct, olist):
     olist.append("sprintf(event_buffer+strlen(event_buffer), \"%lld;\", values[0][papi_it]);\n")
     olist.append("}\n")
     olist.append("sprintf(event_buffer+strlen(event_buffer), \"\\n\");\n")
-    olist.append("list_push(&mpiPi.event_list, event_buffer);\n")
+    olist.append("list_ppush(&mpiPi.event_list, event_buffer);\n")
 
     if funct in afterFunReqList:
         olist.append("memcpy(requestPrint, request, sizeof(MPI_Request));\n")
@@ -1302,7 +1302,7 @@ def CreateWrapper(funct, olist):
         olist.append("sprintf(event_buffer, \"%d,"+ funct + ",%d;%d;%d,%.0lf,%.0lf,%s,%ld\\n\",mpiPi.rank,"+ datacount + "," + datatype + ","+ target +",start_from_begin,end_from_begin, requests, cur_comm);\n")
     
     
-    olist.append("list_push(&mpiPi.event_list, event_buffer);\n")
+    olist.append("list_ppush(&mpiPi.event_list, event_buffer);\n")
     # olist.append("printf(\"%s\",event_buffer);\n")  # debug
     
 
